@@ -1,0 +1,5 @@
+设置终端着色:
+git config --global color.ui true/flase/auto/always
+
+让diff输出的改变信息以粗体、蓝色前景和黑色背景的形式显示：
+git config --global color.diff.meta “blue black bold”

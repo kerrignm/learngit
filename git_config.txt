@@ -1,5 +1,17 @@
 设置终端着色:
 git config --global color.ui true/flase/auto/always
+git config --global color.diff auto
+git config --global color.status auto
+git config --global color.branch auto
 
 让diff输出的改变信息以粗体、蓝色前景和黑色背景的形式显示：
 git config --global color.diff.meta “blue black bold”
+
+乱码解决
+git config --global core.quotepath false            #文件名不乱码,比如文件名是中文
+git config --global gui.encoding utf-8              #设置git gui的界面编码为UTF-8
+git config --global i18n.commitencoding utf-8       #设置 git commit -m时commit log 提交时使用 utf-8 编码
+git config --global i18n.logoutputencoding gbk      #设置git log输出日志时的编码是GBK
+
+设置默认提交分支
+git config --global push.default current            #nothing/matching/tracking/current

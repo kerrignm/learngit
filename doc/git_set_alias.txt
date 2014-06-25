@@ -1,0 +1,17 @@
+常用简写命令
+git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.br branch
+git config --global alias.df diff
+git config --global alias.pl pull
+git config --global alias.ps push
+
+撤销暂存区的修改
+git config --global alias.unstage 'reset HEAD'
+
+显示最后一次提交信息
+git config --global alias.last 'log -1'
+
+配置log颜色
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"

@@ -13,6 +13,6 @@ git config --global alias.unstage 'reset HEAD'
 显示最后一次提交信息
 git config --global alias.last 'log -1'
 
-配置log颜色
+配置log颜色&格式
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 git config --global alias.lgro "log --graph --pretty=oneline --abbrev-commit"

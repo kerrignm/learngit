@@ -3,13 +3,9 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# Python:
-*.py[cod]
+# Java:
 *.so
-*.egg
-*.egg-info
-dist
-build
+*.jar
 
 # My configurations:
 db.ini

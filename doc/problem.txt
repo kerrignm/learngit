@@ -9,4 +9,22 @@ CRLF -- Carriage-Return Line-Feed 回车换行
 git config --gobal core.autocrlf false
 这样系统就不会去进行换行符的转换了
 
+Permission denied (publickey).
+fatal: The remote end hung up unexpectedly
+因为不能识别密钥而没有权限导致的，需要把当前机器使用的id_rsa.pub添加到github帐号的SSH Keys列表中
 
+ssh: connect to host github.com port 22: Connection timed out
+ssh连接github超时，因为ssh阻塞了22端口。解决方案也很简单，修改ssh的配置文件。
+关于修改配置，存在两种解决方法，一种是/etc/ssh/ssh_config中修改全局配置，一种是在用户主目录下.ssh/中添加配置文件，这里我选择的后者。
+cd ~/.ssh/
+touch config
+将如下内容添加到config中
+<span style="font-size:18px;">Host github.com    
+User git    
+Hostname ssh.github.com   
+PreferredAuthentications publickey    
+IdentityFile ~/.ssh/id_rsa   
+Port 443</span>
+测试连接是否畅通，可以使用如下的命令：ssh -T git@github.com
+在看到如下的输出则说明连接成功了：
+Hi yourname! You've successfully authenticated, but GitHub does not provide shell access.

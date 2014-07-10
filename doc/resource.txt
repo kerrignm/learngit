@@ -5,3 +5,5 @@ git命令快速参考
 对操作情景进行了命令的划分，不长，几分钟可以看完，简单快速
 http://buaadallas.blog.51cto.com/399160/574693
 
+git自定义配置
+http://blog.csdn.net/xjch7703/article/details/23743127
